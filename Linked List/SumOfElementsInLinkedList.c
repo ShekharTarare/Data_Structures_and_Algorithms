@@ -9,14 +9,14 @@ void Create(int A[], int n)
 {
     struct Node *t, *last;
     int i;
-    first = (struct Node*)malloc(n*sizeof(struct Node));
+    first = (struct Node*)malloc(sizeof(struct Node));
     first -> data = A[0];
     first -> Next = NULL;
     last = first;
 
     for(i = 1; i < n; i++)
     {
-        t = (struct Node*)malloc(n*sizeof(struct Node));
+        t = (struct Node*)malloc(sizeof(struct Node));
         t -> Next = NULL;
         t -> data = A[i];
         last -> Next = t;
